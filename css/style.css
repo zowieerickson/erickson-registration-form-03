@@ -105,11 +105,11 @@ p {
   flex-direction: column;
 }
 
-.container {
+/* .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
+} */
 
 .container > * {
   margin: 10px;
@@ -119,6 +119,11 @@ p {
   margin-top: 20px;
   margin-right: auto;
   width: auto;
+}
+
+.col {
+  display: flex;
+  flex-direction: row;
 }
 
 .container > input {
