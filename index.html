@@ -99,16 +99,16 @@
             />
             <label for="javascript_news">JavaScript News</label>
 
-            <label>Newsletter format</label>
+            <label id="newsletter-heading">Newsletter format</label>
             <input
-              type="checkbox"
+              type="radio"
               id="html_format"
               value="html_format"
               name="user_format"
             />
             <label for="html_format">HTML</label>
             <input
-              type="checkbox"
+              type="radio"
               id="plain_format"
               value="plain_format"
               name="user_format"
@@ -117,18 +117,16 @@
           </div>
 
           <label>Other topics you'd like to hear about</label>
-          <textarea
-            name="user_recommendations"
-            id="recommendations"
-            cols="30"
-            rows="10"
-          ></textarea>
+          <textarea name="user_recommendations" id="recommendations"></textarea>
         </fieldset>
-        <button type="submit">Sign Up</button>
+        <div id="submit">
+          <button type="submit">Sign Up</button>
+        </div>
       </form>
-      <footer>
-        <p>&copy;The Code Review</p>
-      </footer>
     </main>
+
+    <footer>
+      <p class="light">&copy;The Code Review</p>
+    </footer>
   </body>
 </html>
