@@ -110,7 +110,8 @@ p {
   margin: 10px;
 }
 
-.container > .col {
+.container > label {
+  margin-top: 20px;
 }
 
 /* .container > label,
