@@ -95,13 +95,32 @@ p {
 }
 
 #newsletter {
+  display: flex;
   border: none;
+  flex-direction: column;
 }
 
-#newsletter label,
-#newsletter input {
-  display: inline-flex;
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
+
+.col {
+}
+
+/* .container > label,
+.container input {
+}
+
+.container > input {
+  align-self: flex-end;
+} */
+
+/* #newsletter > label {
+  align-self: flex-end;
+  display: inline-block;
+} */
 
 /* --------- Input Selectors --------- */
 button[type="submit"] {
