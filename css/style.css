@@ -112,6 +112,7 @@ p {
 
 .container > label {
   margin-top: 20px;
+  width: 80%;
 }
 
 /* .container > label,
