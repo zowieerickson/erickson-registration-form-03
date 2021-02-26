@@ -126,9 +126,15 @@ p {
   flex-direction: row;
 }
 
-.container > input {
-  align-self: flex-start;
+.col > label {
+  margin: 10px;
+  padding-top: 2px;
+  padding-left: 7px;
 }
+
+/* .container > input {
+  align-self: flex-start;
+} */
 
 .container > input {
   /* margin-right: 10%; */
