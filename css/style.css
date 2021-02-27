@@ -4,10 +4,33 @@
 
 /* --------- Base Selectors --------- */
 
+body {
+  font-family: "Heebo", sans-serif;
+}
+
+header {
+  background-color: #2d31424d;
+}
+
 form {
+  margin-top: 20px;
   margin-left: 2%;
   margin-right: 2%;
   width: 95%;
+}
+
+hr {
+  width: 92%;
+}
+
+header p {
+  margin-top: 0;
+  padding-bottom: 20px;
+  color: #2d3142fd;
+}
+
+header h2 {
+  margin-bottom: 10px;
 }
 
 h1 {
@@ -40,22 +63,45 @@ select {
   border: none;
   height: 3em;
   border-radius: 4px;
-  background-color: rgba(192, 192, 192, 0.2);
+  background-color: rgba(192, 192, 192, 0.5);
   text-indent: 10px;
 }
 
 textarea {
-  background-color: rgba(192, 192, 192, 0.2);
+  background-color: rgba(192, 192, 192, 0.5);
+  border-radius: 4px;
+  height: 90px;
+  border: none;
+  padding: 10px;
+}
+
+input,
+select,
+textarea {
+  transition: box-shadow 0.28s ease-out;
 }
 
 input:focus,
-select:focus {
-  outline: 2px #1c2e4a solid;
+select:focus,
+textarea:focus {
+  outline: 2px;
+  box-shadow: inset 0 0 0 1.5pt #4d9ceb;
 }
 
-/* select {
-  overflow: scroll;
-} */
+label {
+  color: rgb(71, 70, 70);
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+
+p {
+  text-align: center;
+  font-size: 1.3em;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* --------- Class/ID Selectors --------- */
 
 .options {
   height: 5px;
@@ -70,24 +116,26 @@ select:focus {
   text-align: end;
   padding-right: 4%;
   font-style: italic;
-  color: rgba(138, 136, 136, 0.5);
+  color: rgb(114, 112, 112);
 }
 
-label {
-  color: rgb(107, 105, 105);
-  margin-bottom: 0.5em;
-  font-size: 1.2em;
+textarea::placeholder {
+  text-align: left;
 }
 
-p {
-  text-align: center;
-  font-size: 1.3em;
-  margin-left: 5%;
-  margin-right: 5%;
-  line-height: 1.5em;
+#thick {
+  border: none;
+  height: 3px;
+  background-color: #333;
+  margin-bottom: 0;
 }
 
-/* --------- Class/ID Selectors --------- */
+.thin {
+  margin-top: 4px;
+  border: none;
+  height: 2px;
+  background-color: #333;
+}
 
 .light {
   color: rgb(138, 136, 136);
@@ -99,20 +147,20 @@ p {
   border: none;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-col {
+  display: flex;
+  flex-direction: column;
+}
+
 #newsletter {
   display: flex;
   border: none;
   flex-direction: column;
-}
-
-.container > * {
-  margin: 10px;
-}
-
-.container > label {
-  margin-top: 20px;
-  margin-right: auto;
-  width: auto;
 }
 
 .newsletter-col {
@@ -127,12 +175,27 @@ p {
   padding-left: 7px;
 }
 
+.newsletter-col {
+  height: 40px;
+}
+
+.newsletter-col > input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 div .col {
   margin: 0;
 }
 
 #newsletter-heading {
   width: 100%;
+  padding: 15px 0 0 0;
+}
+
+#other-topics {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
 }
 
 #submit {
@@ -147,24 +210,74 @@ footer p {
   font-size: 0.8em;
 }
 
+.bottom {
+  width: 95%;
+}
+
 /* --------- Input Selectors --------- */
 
 button[type="submit"] {
   color: white;
   font-size: 1.2em;
   border: none;
-  background-color: #b0d7ff;
+  background-color: #4d9ceb;
   border-radius: 4px;
   height: 2.7em;
   margin-top: 1em;
+  margin-bottom: 20px;
 }
 
 input[id="zip"] {
   width: 45%;
 }
 
+/* --------- Media Queries --------- */
+
 @media (min-width: 768px) {
   h1 {
     font-size: 110%;
+  }
+
+  hr {
+    width: 60%;
+    /* margin: auto; */
+  }
+
+  main {
+    width: 60%;
+    margin: auto;
+    background-color: #f9f9fa;
+  }
+  .contact-col {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .contact-col > label {
+    margin: 10px;
+    margin-left: 0px;
+    margin-right: 0;
+    padding-top: 2px;
+    padding-left: 4px;
+    padding-right: 0;
+    flex-grow: 0.12;
+  }
+
+  .contact-col > input,
+  .contact-col > select,
+  .contact-col > label {
+    flex: 1 1 0;
+  }
+
+  .contact-col > select,
+  .contact-col > input {
+    flex: 2.5;
+  }
+
+  input[id="zip"] {
+    flex: 1;
+    align-self: flex-start;
+    margin-right: 42%;
   }
 }
