@@ -39,8 +39,8 @@ h1 {
   margin: auto;
   height: auto;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   text-transform: uppercase;
   width: 100%;
 }
@@ -99,6 +99,11 @@ p {
   font-size: 1.3em;
   margin-left: 5%;
   margin-right: 5%;
+}
+
+footer p {
+  margin-top: 0.5rem;
+  margin-bottom: 15rem;
 }
 
 /* --------- Class/ID Selectors --------- */
@@ -188,14 +193,14 @@ div .col {
   margin: 0;
 }
 
-#newsletter-heading {
+#newsletter-format {
   width: 100%;
-  padding: 15px 0 0 0;
+  padding-top: 2rem;
 }
 
-#other-topics {
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
+.other-topics {
+  padding-top: 2rem;
+  padding-bottom: 0.1rem;
 }
 
 #submit {
@@ -234,13 +239,30 @@ input[id="zip"] {
 /* --------- Media Queries --------- */
 
 @media (min-width: 768px) {
-  h1 {
-    font-size: 110%;
+  header h1 {
+    font-size: 190%;
+    margin-bottom: 4rem;
+  }
+
+  header p {
+    padding-bottom: 4rem;
   }
 
   hr {
     width: 60%;
     /* margin: auto; */
+  }
+
+  .thin {
+    margin-bottom: 2.5rem;
+  }
+
+  .bottom {
+    margin-top: 3rem;
+  }
+
+  #newsletter-format {
+    padding-top: 2rem;
   }
 
   main {
@@ -255,29 +277,24 @@ input[id="zip"] {
   }
 
   .contact-col > label {
-    margin: 10px;
-    margin-left: 0px;
-    margin-right: 0;
-    padding-top: 2px;
-    padding-left: 4px;
-    padding-right: 0;
-    flex-grow: 0.12;
+    margin: 10px 0;
+    padding: 2px 0 0 4px;
   }
 
   .contact-col > input,
-  .contact-col > select,
-  .contact-col > label {
-    flex: 1 1 0;
+  .contact-col > select {
+    flex: 1 230px;
   }
 
-  .contact-col > select,
-  .contact-col > input {
-    flex: 2.5;
+  .contact-col > label {
+    flex-basis: 160px;
   }
 
   input[id="zip"] {
-    flex: 1;
-    align-self: flex-start;
-    margin-right: 42%;
+    flex: 0 150px;
+  }
+
+  footer p {
+    margin-top: 2rem;
   }
 }
