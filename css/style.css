@@ -232,6 +232,12 @@ button[type="submit"] {
   margin-bottom: 20px;
 }
 
+button[type="submit"]:hover {
+  background: #06e0f0;
+  transition: background 0.5s;
+  border-color: none;
+}
+
 input[id="zip"] {
   width: 45%;
 }
